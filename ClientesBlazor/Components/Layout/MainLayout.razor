@@ -1,0 +1,20 @@
+@inherits LayoutComponentBase
+
+<nav class="navbar navbar-expand navbar-dark bg-primary shadow-sm mb-4">
+    <div class="container">
+        <a class="navbar-brand fw-semibold" href="/">
+            <i class="bi bi-people-fill me-2"></i>Administración de Clientes
+        </a>
+        <span class="navbar-text small d-none d-md-inline">.NET 10 · Blazor · Azure</span>
+    </div>
+</nav>
+
+<main class="container pb-5">
+    @Body
+</main>
+
+<div id="blazor-error-ui" class="alert alert-danger m-0 rounded-0">
+    Ocurrió un error inesperado.
+    <a href="." class="reload alert-link">Recargar</a>
+    <span class="dismiss float-end" role="button">✕</span>
+</div>

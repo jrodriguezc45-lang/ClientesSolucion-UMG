@@ -1,0 +1,40 @@
+# Pruebas rápidas de la API (extensión "REST Client" de VS Code o Visual Studio)
+@base = https://localhost:7001
+
+### Listar todos
+GET {{base}}/api/clientes
+
+### Obtener por ID
+GET {{base}}/api/clientes/1
+
+### Crear
+POST {{base}}/api/clientes
+Content-Type: application/json
+
+{
+  "cui": "1111222233334",
+  "nit": "5556667-1",
+  "nombres": "Ana Lucía",
+  "apellidos": "Méndez Ortiz",
+  "direccion": "Zona 10, Guatemala",
+  "telefono": "50001111",
+  "fechaNacimiento": "2001-04-20"
+}
+
+### Actualizar (cambia el 1 por un ID existente)
+PUT {{base}}/api/clientes/1
+Content-Type: application/json
+
+{
+  "idCliente": 1,
+  "cui": "2547896320101",
+  "nit": "1234567-8",
+  "nombres": "Juan Carlos",
+  "apellidos": "Pérez López",
+  "direccion": "Nueva dirección",
+  "telefono": "55559999",
+  "fechaNacimiento": "1995-03-15"
+}
+
+### Eliminar
+DELETE {{base}}/api/clientes/3
